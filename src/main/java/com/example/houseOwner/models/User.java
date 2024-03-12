@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
+@Setter
 @Getter
 @Builder
 @EqualsAndHashCode
@@ -25,9 +26,6 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-
-//    @ManyToOne
-//    private  House house;
 
 
     @Override

@@ -19,8 +19,5 @@ public class House {
     private String address;
     private Long ownerId;
 
-//    @OneToMany
-//    Set<User> users;
-
 
 }
