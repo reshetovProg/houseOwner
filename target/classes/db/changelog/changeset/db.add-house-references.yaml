@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user
+      author: Ivan
+      changes:
+        - addColumn:
+            tableName: house
+            columns:
+              - column:
+                  name: owner_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_user_id
+                    references: _user(id)
