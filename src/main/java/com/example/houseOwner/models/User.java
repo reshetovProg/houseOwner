@@ -26,7 +26,8 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-
+    @Column(name = "house_id")
+    private Long houseId;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -19,8 +19,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
     @Override
     public User getUser(Long id) {
-        return repository.findById(id).orElse(null);
+        return repository.findById(id).orElseThrow(()->new UsernameNotFoundException("user not found") );
     }
+
+    @Override
+    public User getUser(String username) {
+        return repository.findByName(username).orElseThrow(()->new UsernameNotFoundException("user not found") );
+    }
+
     @Override
     public User updateUser(User house) {
         return repository.save(house);

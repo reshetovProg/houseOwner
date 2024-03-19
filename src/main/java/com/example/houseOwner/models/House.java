@@ -3,6 +3,7 @@ package com.example.houseOwner.models;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 import java.util.Set;
 
 @Entity
